@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": "src",
+    "paths": {
+      "@config": ["config"],
+      "@assets": ["assets"],
+      "@interfaces": ["interfaces"],
+      "@store": ["store"],
+      "@queries": ["store/queries"],
+      "@types": ["store/types"],
+      "@actions": ["store/actions"],
+      "@hooks": ["hooks"],
+      "@services": ["services"],
+      "@utils/*": ["utils/*"]
+    }
+  },
+  "include": ["vite.config.ts"]
+}
