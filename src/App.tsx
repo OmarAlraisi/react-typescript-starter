@@ -1,9 +1,12 @@
-import { useState } from "react";
 import { ReactLogo } from "@assets";
 import "./App.css";
+import { useDispatch, useSelector } from "react-redux";
+import { getCounterValue } from "@queries";
+import { incrementCounter } from "@actions";
 
-function App() {
-  const [count, setCount] = useState(0);
+const App = () => {
+  const count = useSelector(getCounterValue);
+  const dispatch = useDispatch();
 
   return (
     <div className="App">
@@ -17,7 +20,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => dispatch(incrementCounter())}>
           count is {count}
         </button>
         <p>
@@ -29,6 +32,6 @@ function App() {
       </p>
     </div>
   );
-}
+};
 
 export default App;
