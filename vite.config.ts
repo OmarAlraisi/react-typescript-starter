@@ -6,15 +6,17 @@ import path from "path";
 export default defineConfig({
   resolve: {
     alias: {
-      "@config": path.resolve(__dirname, "./src/config"),
       "@assets": path.resolve(__dirname, "./src/assets"),
+      "@components": path.resolve(__dirname, "./src/components"),
+      "@commonComponents": path.resolve(__dirname, "./src/components/common"),
+      "@config": path.resolve(__dirname, "./src/config"),
+      "@hooks": path.resolve(__dirname, "./src/hooks"),
       "@interfaces": path.resolve(__dirname, "./src/interfaces"),
+      "@services": path.resolve(__dirname, "./src/services"),
       "@store": path.resolve(__dirname, "./src/store"),
       "@queries": path.resolve(__dirname, "./src/store/queries"),
-      "@actions": path.resolve(__dirname, "./src/store/actions"),
       "@types": path.resolve(__dirname, "./src/store/types"),
-      "@hooks": path.resolve(__dirname, "./src/hooks"),
-      "@services": path.resolve(__dirname, "./src/services"),
+      "@actions": path.resolve(__dirname, "./src/store/actions"),
       "@utils": path.resolve(__dirname, "./src/utils"),
     },
   },

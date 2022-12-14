@@ -17,22 +17,21 @@
     "jsx": "react-jsx",
     "baseUrl": "src",
     "paths": {
-      "@config": ["config"],
       "@assets": ["assets"],
+      "@components/*": ["components/*"],
+      "@commonComponents": ["components/common"],
+      "@config": ["config"],
+      "@hooks": ["hooks"],
       "@interfaces": ["interfaces"],
+      "@services": ["services"],
       "@store": ["store"],
       "@queries": ["store/queries"],
       "@types": ["store/types"],
       "@actions": ["store/actions"],
-      "@hooks": ["hooks"],
-      "@services": ["services"],
       "@utils/*": ["utils/*"]
     },
     "types": ["node", "jest", "@testing-library/jest-dom"]
   },
   "include": ["src"],
-  "references": [
-    { "path": "./tsconfig.node.json" },
-    { "path": "./tsconfig.paths.json" }
-  ]
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

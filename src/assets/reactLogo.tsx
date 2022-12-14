@@ -1,25 +1,19 @@
+import { IAssetProps } from "@interfaces";
 import classNames from "classnames";
-
-interface IReactLogoProps {
-  className?: string;
-  width?: number;
-  height?: number;
-  fill?: string;
-}
 
 export const ReactLogo = ({
   className,
   width = 35.93,
   height = 32,
   fill = "#00D8FF",
-}: IReactLogoProps) => {
+}: IAssetProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={`${width}`}
       height={`${height}`}
       aria-hidden="true"
-      className={classNames("iconify iconify--logos", className)}
+      className={classNames("asset react-logo", className)}
       viewBox="0 0 256 228"
     >
       <path
