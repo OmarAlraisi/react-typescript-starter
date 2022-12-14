@@ -1,8 +1,8 @@
 {
   "name": "vite-react-typescript",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
+  "bin": "./bin/cli.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
