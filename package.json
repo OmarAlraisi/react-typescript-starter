@@ -1,7 +1,9 @@
 {
-  "name": "vite-react-typescript",
-  "version": "0.0.0",
+  "name": "@raisi96/react-typescript-starter",
+  "version": "0.0.1",
+  "author": "Omar Al Raisi",
   "type": "module",
+  "license": "ISC",
   "bin": "./bin/cli.js",
   "scripts": {
     "dev": "vite",

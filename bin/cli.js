@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-const { execSync } = require("child_process");
+import { execSync } from "child_process";
 const projectName = process.argv[2];
 const gitCheckoutCommand = `git clone --depth 1 https://github.com/OmarAlraisi/react-typescript-starter.git ${projectName}`;
-const installDependencies = `cd ${projectName} && yarn`;
+const installDependencies = `cd ${projectName} && npm install`;
 
 const runCommand = (command) => {
   try {
