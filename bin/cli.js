@@ -66,23 +66,21 @@ const createProject = () => {
     process.exit(-1);
   }
 
-  console.log(`Cloning repo as ${projectName}...`);
   const projectCreated = runCommand(gitCheckoutCommand);
   if (!projectCreated) process.exit(-1);
 
   runCommand(`cd ${projectName}`);
   createPackageJSON();
 
-  console.log("Installing dependencies");
+  console.log("Installing dependencies...");
   const dependenciesInstalled = runCommand(installDependencies);
   if (!dependenciesInstalled) process.exit(-1);
 
-  console.log("Project is ready!");
-  console.log(`cd ${projectName} && yarn dev`);
-
   console.log("Deleting .git directory...");
   rmSync(`${projectName}/.git`, { recursive: true, force: true });
-  // runCommand(`rm -rf ${projectName}/.git`);
+
+  console.log("Project is ready!");
+  console.log(`cd ${projectName} && yarn dev`);
 };
 
 createProject();
