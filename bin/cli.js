@@ -79,6 +79,9 @@ const createProject = () => {
 
   console.log("Project is ready!");
   console.log(`cd ${projectName} && yarn dev`);
+
+  console.log("Deleting .git directory...");
+  runCommand(`rm -rf ${projectName}/.git`);
 };
 
 createProject();
