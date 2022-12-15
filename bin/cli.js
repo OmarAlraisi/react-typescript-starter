@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { execSync } from "child_process";
-import { existsSync, writeFileSync } from "fs";
+import { existsSync, writeFileSync, rmSync } from "fs";
 
 const projectName = process.argv[2];
 const gitCheckoutCommand = `git clone --branch project-starter https://github.com/OmarAlraisi/react-typescript-starter.git ${projectName}`;
@@ -81,7 +81,8 @@ const createProject = () => {
   console.log(`cd ${projectName} && yarn dev`);
 
   console.log("Deleting .git directory...");
-  runCommand(`rm -rf ${projectName}/.git`);
+  rmSync(`${projectName}/.git`, { recursive: true, force: true });
+  // runCommand(`rm -rf ${projectName}/.git`);
 };
 
 createProject();
